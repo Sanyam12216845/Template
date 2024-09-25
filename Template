@@ -1,0 +1,55 @@
+//TEMPLATE IN C
+//template can be use in two way one is function template another is in class template.
+//template ---------generic function , genric class
+//TEMPLATE FUNCTION
+
+#include<iostream>
+using namespace std;
+template<class T>    //template function
+void show(T a, T b){
+//	cout<<"Enter two numbers:"<<endl;
+//	cin >>a>>b;
+	cout<<"A :"<<a<<endl;
+	cout<<"B :"<<b<<endl;
+	
+	
+}
+int main(){
+	
+	int p=10;
+	int q=20;
+	char m='j',n='s';
+	float s=10.4,u=40.5;
+	
+	show(p,q);
+	show(m,n);
+	show(s,u);
+	
+}
+
+
+//CLASS TEMPLATE
+#include<iostream>
+#include<conio.h>
+using namespace std;
+template <class T>     //class template
+class show{
+	T a,b;
+	public:
+		show(T p, T q){
+			a=p;
+			b=q;
+		}
+			void show(){
+				cout<<"A :"<<a<<"B :"<<b<<endl;
+				
+				
+			}
+		
+};
+void main(){
+	show <float> ob(60,70);
+	ob.show();
+	return 0;
+	
+}
